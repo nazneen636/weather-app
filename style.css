@@ -1,0 +1,14 @@
+/* .weatherDiv {
+  display: none;
+} */
+#hourlyWeather {
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+#hourlyWeather:hover {
+  scrollbar-color: #b4b4b4 transparent;
+}
+#weatherImg {
+  image-rendering: smooth;
+}

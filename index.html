@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      data-purpose="Layout StyleSheet"
+      title="Web Awesome"
+      href="/css/app-wa-9a26f71a0382097754e89a94b43cf564.css?vsn=d"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-duotone-thin.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-duotone-solid.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-duotone-regular.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-duotone-light.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-thin.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-solid.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-regular.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.7.2/css/sharp-light.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.7.2/css/duotone-thin.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.7.2/css/duotone-regular.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.7.2/css/duotone-light.css"
+    />
+
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="h-screen flex items-center justify-center">
+    <div class="px-8 py-10 max-w-[580px] bg-gray-800 rounded-2xl">
+      <div class="w-full flex justify-between items-center gap-2">
+        <div
+          class="bg-white w-full rounded-3xl flex justify-between items-center"
+        >
+          <input
+            id="inputField"
+            type="search"
+            placeholder="Enter your city"
+            class="placeholder:font-normal rounded-3xl w-full placeholder:text-xl py-2 px-5 bg-none border-none outline-none w-full"
+          />
+          <button
+            id="search"
+            class="mr-3 cursor-pointer border-none outline-none h-10 w-12 flex items-center justify-center"
+          >
+            <i class="fa-solid fa-magnifying-glass text-purple-500 text-xl"></i>
+          </button>
+        </div>
+        <button
+          id="location"
+          class="cursor-pointer border-none outline-none bg-white rounded-full h-10 w-12 flex items-center justify-center"
+        >
+          <i
+            class="fa-regular fa-location-crosshairs text-purple-500 text-2xl"
+          ></i>
+        </button>
+      </div>
+      <div id="weatherDiv">
+        <h3
+          class="text-white text-2xl font-medium text-center mt-5 flex justify-center gap-5 items-end"
+        >
+          <span
+            id="cityInfo"
+            class="uppercase text-3xl font-bold text-orange-400"
+            >City</span
+          >
+          <span id="today" class="text-green-400">Today</span>
+        </h3>
+        <div class="flex items-center justify-center gap-4 mt-4">
+          <div class="flex items-center justify-center mt-1">
+            <img src="" alt="" id="weatherImg" />
+          </div>
+          <div class="flex items-center justify-center text-white">
+            <span class="text-5xl font-medium text-center" id="degree"> 0 </span
+            ><span class="text-5xl font-medium text-center">°C</span>
+          </div>
+        </div>
+        <h3
+          class="text-3xl font-medium text-center mt-3 text-green-400 uppercase"
+          id="city"
+        >
+          Weather Description
+        </h3>
+        <div class="flex items-center justify-between mt-3">
+          <div class="flex items-center justify-center gap-2">
+            <img src="./images/humidity.png" alt="" class="w-[30px]" />
+            <div class="flex flex-col">
+              <div>
+                <span id="humidity" class="text-white text-sm">0</span
+                ><span class="text-white text-sm">%</span>
+              </div>
+              <span class="text-white text-sm">Humidity</span>
+            </div>
+          </div>
+          <div class="flex items-center justify-center gap-2">
+            <img src="./images/wind.png" alt="" class="w-[30px]" />
+            <div class="flex flex-col">
+              <div class="">
+                <span id="wind" class="text-white text-sm">0 km/h</span>
+                <span class="text-white text-sm">km/h</span>
+              </div>
+
+              <span class="text-white text-sm">Wind speed</span>
+            </div>
+          </div>
+        </div>
+        <div id="hourlyWeather" class="py-3 mt-4 flex gap-2">
+          <!-- <div
+            class="hour flex items-center justify-center flex-col border border-gray-100 w-fit py-1 px-4 rounded-lg"
+          >
+            <span id="hourlyTime" class="text-base font-medium text-white"
+              >11:00</span
+            >
+            <img id="hourlyIcon" src="/images/clouds.png" alt="" class="w-10" />
+            <span
+              id="hourlyTemperature"
+              class="text-base font-medium text-white"
+              >26°</span
+            >
+          </div> -->
+        </div>
+      </div>
+    </div>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
