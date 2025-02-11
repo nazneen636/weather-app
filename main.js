@@ -83,7 +83,7 @@ function getHourlyData(hourlyData, localtime) {
 }
 
 async function getWeatherInfo(cityName) {
-  const apiUrl = `http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${cityName}`;
+  const apiUrl = `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${cityName}`;
   try {
     const response = await fetch(apiUrl);
     const data = await response.json();
@@ -110,7 +110,7 @@ searchBtn.addEventListener("click", () => {
 
 // location api=====
 async function getLocationApi(lat, lon) {
-  const apiUrl = `http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${lat},${lon}`;
+  const apiUrl = `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${lat},${lon}`;
   try {
     const response = await fetch(apiUrl);
     const data = await response.json();
